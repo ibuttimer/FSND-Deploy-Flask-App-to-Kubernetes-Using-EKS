@@ -25,6 +25,11 @@ def client():
     yield client
 
 
+def test_build_fails(client):
+    # check build fails in CodePipeline
+    assert False
+
+
 def test_health(client):
     response = client.get('/')
     assert response.status_code == 200
