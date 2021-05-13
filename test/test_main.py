@@ -25,6 +25,7 @@ def client():
     yield client
 
 
+@pytest.mark.skip(reason="not required unless testing pipeline failure")
 def test_build_fails(client):
     # check build fails in CodePipeline
     assert False
